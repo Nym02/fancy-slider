@@ -121,6 +121,12 @@ const changeSlide = (index) => {
   items[index].style.display = "block"
 }
 
+document.getElementById('search').addEventListener('keypress', (e)=>{
+  if(e.key === 'Enter'){
+    searchBtn.click();
+  }
+})
+
 searchBtn.addEventListener('click', function () {
   document.querySelector('.main').style.display = 'none';
   clearInterval(timer);
